@@ -6,6 +6,16 @@ public class Product {
     private double _unitPrice;
     private String _code;
 
+    public Product() {
+    }
+
+    public Product(int id, String name, int unitsInStock, double unitPrice) {
+        _id = id;
+        _name = name;
+        _unitsInStock = unitsInStock;
+        _unitPrice = unitPrice;
+    }
+
     public int getId() {
         return _id;
     }
@@ -39,9 +49,9 @@ public class Product {
     }
 
     public String getCode() {
-        var result = _id + "-" + _name.substring(0, 1);
+        _code = _id + "-" + _name.substring(0, 1);
         
-        return result;
+        return _code;
     }
 
     /* public void setCode(String code) {
